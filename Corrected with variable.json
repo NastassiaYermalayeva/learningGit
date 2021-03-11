@@ -1,0 +1,302 @@
+{
+	"info": {
+		"_postman_id": "c6905093-26d5-4793-bae2-23564086006f",
+		"name": "Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://api4.thetvdb.com/v4/artwork-types",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"name\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlrZXkiOiJ0ZXN0MTExIiwiY29tbXVuaXR5X3N1cHBvcnRlZCI6ZmFsc2UsImV4cCI6MTYxNjAwNDE3MywiaWQiOiIwIiwiaXNfbW9kIjpmYWxzZSwiaXNfc3lzdGVtX2tleSI6ZmFsc2UsInBpbiI6IjEyMzQifQ.i5N1_kkiK8FFIqpOImZ9IWefJ4D7pKlwjhwQuloG9GOPDjKpcN7OzUyZ6tkWG2f-8eNrnXkpF8jI_AXPrmGyHettXbea9-ZQcwjWeV8wgLDuvcu4S-dOrj6t3WEwSL8y84qWz_EB1JzLcxoOzEXoDc_5s801XzKZ46r7Z40-WJu9qgLK1vOymBOdaUWTwspJUzRnw8U8G5SGJEH1bLaRNmXYkjh8dVR26fdSvbZdKiZdc9lu9ftd31uSqr2JQEAp276aiv84Q70CARRyWYwaC_71gDZO1ejUcq808IKu6lPv2U3JZNbq6_msxhy2mySOlLq_6smfhbDk8CPt2Cf1m-wsxOGG4Ug4RGYuRMPBujWC9mhhdkc9bFcUHRheloApP6k1S-s5-g-nWuBU1n6VRyCoUljtex5aLtqtdTzL9AO2k_p6KpB2fnKHRkBPyP4GfYUIL2U-1YJ3maRaJ5st2_CXmKLLP6yK2M2ePtOeKwCjgu-5sni4oWetNbiQJMo2ifOaQXPmpj0CPgSnLho0PVQlUI6zyE_dHu3pZQrMpexLHZt-OHbAFX602Vc6pmY3q82wQGjgBkuEZy2tzUkTf26waWswusy5IczKxgbFnFSimUzZF7R_THCoYc6KzfJlhsXLyk8xrTcaNdtcjXBOUi8rtLxE4ERYsYiiWfCygMw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "bearerAuth",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{url}}/v4/content-ratings",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v4",
+						"content-ratings"
+					]
+				},
+				"description": "1"
+			},
+			"response": []
+		},
+		{
+			"name": "https://api4.thetvdb.com/v4/episodes/2/translations/eng",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"isAlias\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlrZXkiOiJzdHJpbmcxIiwiY29tbXVuaXR5X3N1cHBvcnRlZCI6ZmFsc2UsImV4cCI6MTYxNjAwODAzNywiaWQiOiIwIiwiaXNfbW9kIjpmYWxzZSwiaXNfc3lzdGVtX2tleSI6ZmFsc2UsInBpbiI6IjEyMzQifQ.gtPH8whTe6Y1goeVCNvf2zunNXOGhHtvD05T_LoY58okL7Lv8WHTGzhaWQybf2EdyFmyb3w2yQ32ycobatN6zPTfPefmva3Az4eCq4lSaL05zqmjDszzrOdm1S92oL7hm863gQ2UU4igYbQulgy7dvqgkwJivLtqFuMRfljYnFlgxG0v5_DX0eb8mJQk9DzNkZz_dAHiXxAhz8YspfC_63tqAwzES57w5nv9jOPzttxLhviR66lgWUwkTyzGkcCybZF49G1z9uiSUzjUlNSyt8A0wfRDdSz8xUsOQbtCnNf2EkJfZ5op6xP4z2r7en2jZi0pMUVxAptReTEF9N21jm85BSQYD9MO5tjXYifXodd4HyH8LZCsAEI_MzYnn-Bxc-X_icfR6IZRsx5J7w8bj6c-xl84cw8jIzZ3v4CjBMeWKJ7Fw8atbeuoQ8NovUhitaYZ96w6uR1pU_TtQ04M4EGf9JFUFblBS1Laf5YR6K1kFPWXy-iaWLiO7t_Nm90EzfVgNOsS0-L54zYtQ57P1zrlcJXnFn5c_Gm-A9qOppymUcJjqc5bkdJ-WPquzHj9uAwryDSutVtna11rXKpJgM585r09V-ZuVQNoiYpRhwm-n-3X3CrC4YEW5lZetN9_74uR_-KVQsXLHcqhLYBvWK1ozMdddY9WeFRBpV0fbRQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/v4/episodes/2/translations/eng",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v4",
+						"episodes",
+						"2",
+						"translations",
+						"eng"
+					]
+				},
+				"description": "2"
+			},
+			"response": []
+		},
+		{
+			"name": "https://api4.thetvdb.com/v4/companies/1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"country\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlrZXkiOiJzdHJpbmcxIiwiY29tbXVuaXR5X3N1cHBvcnRlZCI6ZmFsc2UsImV4cCI6MTYxNjAwODAzNywiaWQiOiIwIiwiaXNfbW9kIjpmYWxzZSwiaXNfc3lzdGVtX2tleSI6ZmFsc2UsInBpbiI6IjEyMzQifQ.gtPH8whTe6Y1goeVCNvf2zunNXOGhHtvD05T_LoY58okL7Lv8WHTGzhaWQybf2EdyFmyb3w2yQ32ycobatN6zPTfPefmva3Az4eCq4lSaL05zqmjDszzrOdm1S92oL7hm863gQ2UU4igYbQulgy7dvqgkwJivLtqFuMRfljYnFlgxG0v5_DX0eb8mJQk9DzNkZz_dAHiXxAhz8YspfC_63tqAwzES57w5nv9jOPzttxLhviR66lgWUwkTyzGkcCybZF49G1z9uiSUzjUlNSyt8A0wfRDdSz8xUsOQbtCnNf2EkJfZ5op6xP4z2r7en2jZi0pMUVxAptReTEF9N21jm85BSQYD9MO5tjXYifXodd4HyH8LZCsAEI_MzYnn-Bxc-X_icfR6IZRsx5J7w8bj6c-xl84cw8jIzZ3v4CjBMeWKJ7Fw8atbeuoQ8NovUhitaYZ96w6uR1pU_TtQ04M4EGf9JFUFblBS1Laf5YR6K1kFPWXy-iaWLiO7t_Nm90EzfVgNOsS0-L54zYtQ57P1zrlcJXnFn5c_Gm-A9qOppymUcJjqc5bkdJ-WPquzHj9uAwryDSutVtna11rXKpJgM585r09V-ZuVQNoiYpRhwm-n-3X3CrC4YEW5lZetN9_74uR_-KVQsXLHcqhLYBvWK1ozMdddY9WeFRBpV0fbRQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/v4/companies/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v4",
+						"companies",
+						"1"
+					]
+				},
+				"description": "3"
+			},
+			"response": []
+		},
+		{
+			"name": "https://api4.thetvdb.com/v4/series/70327/extended",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"slug\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlrZXkiOiJzdHJpbmcxIiwiY29tbXVuaXR5X3N1cHBvcnRlZCI6ZmFsc2UsImV4cCI6MTYxNjAwODAzNywiaWQiOiIwIiwiaXNfbW9kIjpmYWxzZSwiaXNfc3lzdGVtX2tleSI6ZmFsc2UsInBpbiI6IjEyMzQifQ.gtPH8whTe6Y1goeVCNvf2zunNXOGhHtvD05T_LoY58okL7Lv8WHTGzhaWQybf2EdyFmyb3w2yQ32ycobatN6zPTfPefmva3Az4eCq4lSaL05zqmjDszzrOdm1S92oL7hm863gQ2UU4igYbQulgy7dvqgkwJivLtqFuMRfljYnFlgxG0v5_DX0eb8mJQk9DzNkZz_dAHiXxAhz8YspfC_63tqAwzES57w5nv9jOPzttxLhviR66lgWUwkTyzGkcCybZF49G1z9uiSUzjUlNSyt8A0wfRDdSz8xUsOQbtCnNf2EkJfZ5op6xP4z2r7en2jZi0pMUVxAptReTEF9N21jm85BSQYD9MO5tjXYifXodd4HyH8LZCsAEI_MzYnn-Bxc-X_icfR6IZRsx5J7w8bj6c-xl84cw8jIzZ3v4CjBMeWKJ7Fw8atbeuoQ8NovUhitaYZ96w6uR1pU_TtQ04M4EGf9JFUFblBS1Laf5YR6K1kFPWXy-iaWLiO7t_Nm90EzfVgNOsS0-L54zYtQ57P1zrlcJXnFn5c_Gm-A9qOppymUcJjqc5bkdJ-WPquzHj9uAwryDSutVtna11rXKpJgM585r09V-ZuVQNoiYpRhwm-n-3X3CrC4YEW5lZetN9_74uR_-KVQsXLHcqhLYBvWK1ozMdddY9WeFRBpV0fbRQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/v4/series/70327/extended",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v4",
+						"series",
+						"70327",
+						"extended"
+					]
+				},
+				"description": "4"
+			},
+			"response": []
+		},
+		{
+			"name": "https://api4.thetvdb.com/v4/award-categories/1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"award\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlrZXkiOiJzdHJpbmcxIiwiY29tbXVuaXR5X3N1cHBvcnRlZCI6ZmFsc2UsImV4cCI6MTYxNjAwODAzNywiaWQiOiIwIiwiaXNfbW9kIjpmYWxzZSwiaXNfc3lzdGVtX2tleSI6ZmFsc2UsInBpbiI6IjEyMzQifQ.gtPH8whTe6Y1goeVCNvf2zunNXOGhHtvD05T_LoY58okL7Lv8WHTGzhaWQybf2EdyFmyb3w2yQ32ycobatN6zPTfPefmva3Az4eCq4lSaL05zqmjDszzrOdm1S92oL7hm863gQ2UU4igYbQulgy7dvqgkwJivLtqFuMRfljYnFlgxG0v5_DX0eb8mJQk9DzNkZz_dAHiXxAhz8YspfC_63tqAwzES57w5nv9jOPzttxLhviR66lgWUwkTyzGkcCybZF49G1z9uiSUzjUlNSyt8A0wfRDdSz8xUsOQbtCnNf2EkJfZ5op6xP4z2r7en2jZi0pMUVxAptReTEF9N21jm85BSQYD9MO5tjXYifXodd4HyH8LZCsAEI_MzYnn-Bxc-X_icfR6IZRsx5J7w8bj6c-xl84cw8jIzZ3v4CjBMeWKJ7Fw8atbeuoQ8NovUhitaYZ96w6uR1pU_TtQ04M4EGf9JFUFblBS1Laf5YR6K1kFPWXy-iaWLiO7t_Nm90EzfVgNOsS0-L54zYtQ57P1zrlcJXnFn5c_Gm-A9qOppymUcJjqc5bkdJ-WPquzHj9uAwryDSutVtna11rXKpJgM585r09V-ZuVQNoiYpRhwm-n-3X3CrC4YEW5lZetN9_74uR_-KVQsXLHcqhLYBvWK1ozMdddY9WeFRBpV0fbRQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/v4/award-categories/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v4",
+						"award-categories",
+						"1"
+					]
+				},
+				"description": "5"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://api4.thetvdb.com"
+		}
+	]
+}
