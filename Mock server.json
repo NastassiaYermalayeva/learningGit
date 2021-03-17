@@ -1,0 +1,285 @@
+{
+	"info": {
+		"_postman_id": "e9d628df-ab8a-47d6-affb-85251aa0b695",
+		"name": "DEMO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/demo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/demo",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"demo"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/demo",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/demo",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"demo"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 13 Mar 2021 08:26:13 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "5"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=45c9739cef328a96"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=b117dcbd7b9ddda7"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1615624033"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"5-9/+ei3uy4Jtwk1pdeF4MxdnQq/A\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						}
+					],
+					"cookie": [],
+					"body": "Hello!"
+				},
+				{
+					"name": "gopnik",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}//demo/gopnik",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"",
+								"demo",
+								"gopnik"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "Est' pozvonit'?"
+				}
+			]
+		},
+		{
+			"name": "Gopnik",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}//demo/gopnik",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"",
+						"demo",
+						"gopnik"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pivo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/demo/HoldMyPivo",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"demo",
+						"HoldMyPivo"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "HoldMyPivo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/demo/HoldMyPivo",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"demo",
+								"HoldMyPivo"
+							]
+						}
+					},
+					"_postman_previewlanguage": "xml",
+					"header": null,
+					"cookie": [],
+					"body": "<note>\r\n<to>Friends</to>\r\n<from>Me</from>\r\n<heading>Reminder</heading>\r\n<body>Don't forget my pivo!</body>\r\n</note>"
+				}
+			]
+		},
+		{
+			"name": "LeonidAgutin",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": [
+				{
+					"name": "LeonidAgutin",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/demo/LeonidAgutin",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"demo",
+								"LeonidAgutin"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "Hop Hey Lalalaay!"
+				}
+			]
+		},
+		{
+			"name": "IgorNikolaev",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": [
+				{
+					"name": "IgorNikolaev",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/demo/IgorNikolaev",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"demo",
+								"IgorNikolaev"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "Vyp'em za ljubov', kak blestjat sejchas tvoi glaza\r\nVyp'em za ljubov', pust' drozhit hrustal'naja sleza\r\nVyp'em za ljubov' i uzhe ne nado lishnih slov\r\nVyp'em za ljubov', rodnaja, vyp'em za ljubov'!"
+				}
+			]
+		}
+	]
+}
